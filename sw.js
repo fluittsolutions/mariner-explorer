@@ -1,5 +1,5 @@
 // Version 1.0: precache the app and all licensed deck plans for airplane mode.
-const CACHE='mariner-explorer-centered-round-markers-20261031';
+const CACHE='mariner-explorer-centered-round-markers-fixed-20261031';
 const ASSETS=["./","./index.html","./style.css","./app.js","./manifest.webmanifest","./icon.svg","./deck-plans/deck2-2022.png","./deck-plans/deck3-2022.png","./deck-plans/deck4.png","./deck-plans/deck5.png","./deck-plans/deck6-2025.png","./deck-plans/deck7-2025.png","./deck-plans/deck8-2025.png","./deck-plans/deck9-2025.png","./deck-plans/deck10-2025.png","./deck-plans/deck11-2022.png","./deck-plans/deck12-2022.png","./deck-plans/deck13.png","./deck-plans/deck14.png","./deck-plans/deck15.png"];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim())));
