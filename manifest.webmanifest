@@ -1,0 +1,1 @@
+{"name":"Mariner Explorer","short_name":"Mariner","description":"Offline-first personal ship deck journal","start_url":"./","scope":"./","display":"standalone","background_color":"#eef3f7","theme_color":"#12304a","icons":[{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]}
